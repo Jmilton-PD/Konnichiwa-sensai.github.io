@@ -1,61 +1,23 @@
-# Brief04[Project Name]
+#Konnichiwa-Sensai
 
 
 
-
-
-
-![image](https://wikifactory.com/files/RmlsZTozNTYxNDY=)
-
-​
-
-​
 
 Joe Daniel Milton - Other Today
 
 PERSONAL URL: \[e.g website or instagram\]
 
-​
 
 A home gaming system that helps the aquisition of a second language by making use of the principles of Distributed Design, the Hooked Model of trigger &gt; action &gt; variable rewards &gt; investment ect
 
-​
 
 It's been designed to be makeable by anyone with access to just a 3D printer and online delivery services!
 
-​
 
 WHY: short description of why it is needed
 
 
-
-
-
-
-## PRODUCT PROPOSITION
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+About the Game!
 
 
 
