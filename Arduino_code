@@ -1,90 +1,61 @@
-// constants won't change. Used here to set a pin number:
-const int ledPin =  8;// the number of the LED pin
+const int UpButton =11
+const int DownButton = 10
+const int RightButton = 9
+const int LeftButton = 12
+const int AButton = 6
+const int BButton = 5
+const int startButton = 7
 
-// Variables will change:
-int ledState = LOW;             // ledState used to set the LED
 
-// Generally, you should use "unsigned long" for variables that hold time
-// The value will quickly become too large for an int to store
-unsigned long previousMillis = 0;        // will store last time LED was updated
 
-// constants won't change:
-const long interval = 10;           // interval at which to blink (milliseconds)
-
-const int SW_pin = 2; // digital pin connected to switch output
-const int X_pin = 0; // analog pin connected to X output
-const int Y_pin = 1; // analog pin connected to Y output
-
-const int AButton = 12;
-const int BButton = 11;
-const int CButton = 10;
-const int DButton = 9;
-
-void setup() {
-  // set the digital pin as output:
-  pinMode(8, OUTPUT);
-
-  pinMode(SW_pin, INPUT);
-  digitalWrite(SW_pin, HIGH);
-  Serial.begin(115200);
-
-   Serial.begin(115200);
+void setup(){
+   Serial.begin(9600);
+   pinMode(UpButton, INPUT);
+   pinMode(DownButton, INPUT);
+   pinMode(RightButton, INPUT);
+   pinMode(LeftButton, INPUT);
    pinMode(AButton, INPUT);
-   pinMode(AButton, INPUT);
-   pinMode(AButton, INPUT);
-   pinMode(AButton, INPUT);
+   pinMode(BButton, INPUT);
+   pinMode(startButton, INPUT);
    
-  
-}
 
-void loop() {
-  // here is where you'd put code that needs to be running all the time.
+   
+} 
 
-  // check to see if it's time to blink the LED; that is, if the difference
-  // between the current time and last time you blinked the LED is bigger than
-  // the interval at which you want to blink the LED.
-  unsigned long currentMillis = millis();
+void loop(){
 
-  if (currentMillis - previousMillis >= interval) {
-    // save the last time you blinked the LED
-    previousMillis = currentMillis;
-
-    // if the LED is off turn it on and vice-versa:
-    if (ledState == LOW) {
-      ledState = HIGH;
-    } else {
-      ledState = LOW;
-    }
-
-    // set the LED with the ledState of the variable:
-    digitalWrite(ledPin, ledState);
-
-  Serial.print("Switch:  ");
-  Serial.print(digitalRead(SW_pin));
-  Serial.print("\n");
-  Serial.print("X-axis: ");
-  Serial.print(analogRead(X_pin));
-  Serial.print("\n");
-  Serial.print("Y-axis: ");
-  Serial.println(analogRead(Y_pin));
-  Serial.print("\n\n");
-  delay(500);
-
- if(digitalRead(AButton) == HIGH){
-  Serial.println("A:");//It doesn't matter what you print. Just have a colon at the end to make it easier to parse the string.
-  delay(10);
+ 
+   if(digitalRead(UpButton) == HIGH){
+  Serial.println("Up:");//It doesn't matter what you print. Just have a colon at the end to make it easier to parse the string.
+  delay(100);
+   }
+   if(digitalRead(DownButton) == HIGH){
+  Serial.println("Down:");
+  delay(100);
+   }
+   if(digitalRead(RightButton) == HIGH){
+  Serial.println("Right:");//It doesn't matter what you print. Just have a colon at the end to make it easier to parse the string.
+  delay(100);
+   }
+   if(digitalRead(LeftButton) == HIGH){
+  Serial.println("Left:");
+  delay(100);
+   }
+   if(digitalRead(AButton) == HIGH){
+  Serial.println("A:");
+  delay(100);
    }
    if(digitalRead(BButton) == HIGH){
   Serial.println("B:");
-  delay(10);
+  delay(100);
    }
-   if(digitalRead(CButton) == HIGH){
-  Serial.println("C:");//It doesn't matter what you print. Just have a colon at the end to make it easier to parse the string.
-  delay(10);
+   if(digitalRead(startButton) == HIGH){
+  Serial.println("Start:");
+  delay(100);
    }
-   if(digitalRead(DButton) == HIGH){
-  Serial.println("D:");
-  delay(10);
-   }
-  }
+   
+ 
 }
+/*Add or subtract to the code for your application. Just make sure you do a Serial.println() 
+* with a colon when you want to simulate a keypress.
+*/
